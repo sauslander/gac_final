@@ -47,4 +47,5 @@ colnames(gac_final) <- c("activity", "user_id", "measures", "values")
 
 gac_final_tidy <- summarise(group_by(gac_final, activity, user_id, measures), mean = mean(values))
 
+#### Write final txt file for submission
 write.table(gac_final_tidy, file = "gac_tiday_sa.txt", row.names = FALSE)
