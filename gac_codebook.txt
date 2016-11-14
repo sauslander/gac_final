@@ -1,0 +1,39 @@
+Raw data
+
+The raw data for this assignment originated from:
+      Website otulining scope of the experiement - http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+      Zip file containing data from the site - https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Process
+
+Files uploaded in order from zip in manipulation steps (below):
+      subject_test.txt
+      subject_train.txt
+      x_train.txt
+      y_train.txt
+      x_test.txt
+      y_test.txt
+      activity_labels.txt
+      features.txt
+      
+Manipulation:
+      1) After uploading all the txt files mentioned above except features.txt, labels were set as subject_id (subject txt files),
+      activity_id (y txt files), and activity (activity txt files).
+      2) Merged data sets using dplyr package by category of test vs train group.
+      3) Merged rows of the test and train data sets to one (called gac_merged_activity).
+      4) Read in the features data set and applied the names in that txt file to gac_merged_activity.
+      5) Created a new data set (gac_merged_final) by grouping gac_merged_activity by specified variables in the assignment instructions.
+      6) Tidy data using the tidyr package
+      7) Created final data set (gac_final_tidy) by averaging the column of the specified variables from the assignment information.
+      
+*** Each step above was checked by using dim(), head(), tail(), and unique() functions for dataframes and columns of these dataframes.
+
+Final Results
+
+Result is a final tidy data set in a txt file: gac_tidy_sa.txt
+
+Final variables in set include:
+user_id - is the number specified for each subject
+activity - is the activity performed by the subjects (laying, sitting, standing, walking, walking upstairs, walking downstairs
+measures - are the mean and standard deviaton measures that were calculated for each subject performing the activities above
+values - are the average values recorded for each measure
