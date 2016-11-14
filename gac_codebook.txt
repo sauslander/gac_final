@@ -6,7 +6,10 @@ The raw data for this assignment originated from:
 
 Process
 
-Files uploaded in order from zip in manipulation steps (below):
+From the zip file above, a folder was created in my working directory called Get_Clean_project that conatins all files needed to 
+complete the assignment.
+
+Below are the files that were uploaded for this assignment from Get_Clean_project folder:
       subject_test.txt
       subject_train.txt
       x_train.txt
@@ -16,13 +19,15 @@ Files uploaded in order from zip in manipulation steps (below):
       activity_labels.txt
       features.txt
       
+      
 Manipulation:
       1) After uploading all the txt files mentioned above except features.txt, labels were set as subject_id (subject txt files),
       activity_id (y txt files), and activity (activity txt files).
       2) Merged data sets using dplyr package by category of test vs train group.
       3) Merged rows of the test and train data sets to one (called gac_merged_activity).
       4) Read in the features data set and applied the names in that txt file to gac_merged_activity.
-      5) Created a new data set (gac_merged_final) by grouping gac_merged_activity by specified variables in the assignment instructions.
+      5) Created a new data set (gac_merged_final) by grouping gac_merged_activity by specified variables in the assignment
+      instructions.
       6) Tidy data using the tidyr package
       7) Created final data set (gac_final_tidy) by averaging the column of the specified variables from the assignment information.
       
